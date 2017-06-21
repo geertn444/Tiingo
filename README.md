@@ -19,6 +19,8 @@ AFTER:<BR><BR>
  import tiingo
  
  prices = tiingo.DataReader(ticker, d_start, d_end)
+
+ NOTE: no more options supported today !<BR>
  
- Get your scripts back up and running :-)<BR>
- NOTE: no more options supported today !
+ Get your scripts back up and running again :-)<BR>
+
