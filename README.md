@@ -1,7 +1,7 @@
 # Tiingo
-Python module to use Tiingo as replacement for Pandas DataReader with yahoo
+Python module to use Tiingo as replacement for Pandas DataReader with Yahoo
 
-Since stupid Yahoo stopped there Stock API, we can't use Pandas DataReader procedure anymore to get quotes data.
+Since stupid Yahoo/Verizon stopped their Stock API last month without notice, we can't use Pandas DataReader procedure anymore to get quotes data.
 This simple module is meant to be a drop-in replacement and uses Tiingo as provider: https://www.tiingo.com/
 
 It is free (? for now). You need to register and then you get an API key which needs to be inserted into the module.
