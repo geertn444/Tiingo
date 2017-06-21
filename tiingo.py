@@ -18,16 +18,11 @@ def DataReader(ticker,d_start,d_end):
        'Authorization' : 'Token ' + yourtoken
        }
  url = "https://api.tiingo.com/tiingo/daily/" + ticker + "/prices?startDate=" + d_start + "&endDate="+ d_end
- #requestResponse = requests.get(url,headers=headers)
- print url
- requestResponse = requests.get(url,headers=headers)
- #print requestResponse
- json_result = requestResponse.json()
- #print json_result
-
-
  
- #result = pd.read_json(json_result,orient='records')
+ #print url
+ requestResponse = requests.get(url,headers=headers)
+ json_result = requestResponse.json()
+ 
  df = pd.DataFrame.from_records(json_result)
  
  #Check for existance of Adj Close column
@@ -42,9 +37,10 @@ def DataReader(ticker,d_start,d_end):
   else:
    print "Error: No Close information"
    return
-   
  
+ #Convert ISO date format to Pandas DateTime
  df['date']  = pd.to_datetime(df['date'])
+ #Align Column Names to previous DataReader names
  df = df.rename(columns={'date': 'Date', 'open': 'Open','adjClose':'Adj Close','volume':'Volume','high':'High','low':'Low','close':'Close'})
  a = df.set_index(['Date'])
  #print a
