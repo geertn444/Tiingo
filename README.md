@@ -20,5 +20,5 @@ AFTER:<BR><BR>
  
  prices = tiingo.DataReader(ticker, d_start, d_end)
  
- Get your scripts back up and running :-)
+ Get your scripts back up and running :-)<BR>
  NOTE: no more options supported today !
