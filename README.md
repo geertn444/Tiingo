@@ -12,10 +12,10 @@ NOTE: I did notice that the data provided by Tiingo is not as reliable as Yahoo.
 
 To convert or fix a script:
 
-BEFORE:<BR>
+BEFORE:<BR><BR>
  prices = web.DataReader(ticker, 'yahoo', d_start, d_end)
  
-AFTER:<BR>
+AFTER:<BR><BR>
  import tiingo
  
  prices = tiingo.DataReader(ticker, d_start, d_end)
